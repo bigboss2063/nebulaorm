@@ -10,32 +10,32 @@ import (
 // Config  for DB
 type Config struct {
 	// Username to connect to nebula graph server
-	Username string `json:"username" yaml:"username"`
+	Username string `json:"username" yaml:"username" mapstructure:"username"`
 
 	// Password to connect to nebula graph server
-	Password string `json:"password" yaml:"password"`
+	Password string `json:"password" yaml:"password" mapstructure:"password"`
 
 	// SpaceName name of the graph space used for the current connection
-	SpaceName string `json:"space_name" yaml:"space_name"`
+	SpaceName string `json:"space_name" yaml:"space_name" mapstructure:"space_name"`
 
 	// Addresses server address list，host:port
-	Addresses []string `json:"addresses" yaml:"addresses"`
+	Addresses []string `json:"addresses" yaml:"addresses" mapstructure:"addresses"`
 
 	// Timeout connection dail read-write timeout
-	ConnTimeout time.Duration `json:"conn_timeout" yaml:"conn_timeout"`
+	ConnTimeout time.Duration `json:"conn_timeout" yaml:"conn_timeout" mapstructure:"conn_timeout"`
 
 	// ConnMaxIdleTime connection max idle time
-	ConnMaxIdleTime time.Duration `json:"conn_max_idle_time" yaml:"conn_max_idle_time"`
+	ConnMaxIdleTime time.Duration `json:"conn_max_idle_time" yaml:"conn_max_idle_time" mapstructure:"conn_max_idle_time"`
 
 	// MaxOpenConns max number of connections in the connection pool
-	MaxOpenConns int `json:"max_open_conns" yaml:"max_open_conns"`
+	MaxOpenConns int `json:"max_open_conns" yaml:"max_open_conns" mapstructure:"max_open_conns"`
 
 	// MinOpenConns min number of connections in the connection pool
-	MinOpenConns int `json:"min_open_conns" yaml:"min_open_conns"`
+	MinOpenConns int `json:"min_open_conns" yaml:"min_open_conns" mapstructure:"min_open_conns"`
 
 	// TimezoneName time zone name, default is Local, if the nebula graph server is configured in a time zone different from Local,
 	// you need to change it to the same configuration as the nebula graph server.
-	TimezoneName string `json:"timezone_name" yaml:"timezone_name"`
+	TimezoneName string `json:"timezone_name" yaml:"timezone_name" mapstructure:"timezone_name"`
 
 	// nebulaSessionOpts nebula session pool config
 	nebulaSessionOpts []nebula.SessionPoolConfOption
