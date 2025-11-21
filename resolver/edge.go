@@ -3,9 +3,10 @@ package resolver
 import (
 	"errors"
 	"fmt"
-	nebula "github.com/vesoft-inc/nebula-go/v3"
 	"reflect"
 	"strconv"
+
+	nebula "github.com/vesoft-inc/nebula-go/v3"
 )
 
 // EdgeTypeNamer specifies the name of the edge type. a structure that implements this interface will be treated as an edge.

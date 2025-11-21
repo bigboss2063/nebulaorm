@@ -1,9 +1,10 @@
 package statement
 
 import (
+	"reflect"
+
 	"github.com/haysons/norm/clause"
 	"github.com/haysons/norm/resolver"
-	"reflect"
 )
 
 // CreateVertexTags creates all tags associated with a vertex.

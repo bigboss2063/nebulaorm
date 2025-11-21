@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/haysons/norm/clause"
 	"log"
+
+	"github.com/haysons/norm/clause"
 )
 
 func queryGo() {

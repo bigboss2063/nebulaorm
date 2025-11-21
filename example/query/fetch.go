@@ -2,9 +2,10 @@ package main
 
 import (
 	"errors"
+	"log"
+
 	"github.com/haysons/norm"
 	"github.com/haysons/norm/clause"
-	"log"
 )
 
 func fetch() {

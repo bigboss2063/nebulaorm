@@ -2,8 +2,9 @@ package clause_test
 
 import (
 	"fmt"
-	"github.com/haysons/norm/clause"
 	"testing"
+
+	"github.com/haysons/norm/clause"
 )
 
 func TestGroupBy(t *testing.T) {

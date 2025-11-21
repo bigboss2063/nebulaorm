@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/haysons/norm"
 	"log"
 	"time"
+
+	"github.com/haysons/norm"
 )
 
 var db *norm.DB

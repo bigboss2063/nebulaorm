@@ -2,13 +2,14 @@ package norm
 
 import (
 	"fmt"
+	"net"
+	"strconv"
+	"time"
+
 	"github.com/haysons/norm/logger"
 	"github.com/haysons/norm/resolver"
 	"github.com/haysons/norm/statement"
 	nebula "github.com/vesoft-inc/nebula-go/v3"
-	"net"
-	"strconv"
-	"time"
 )
 
 // DB uses statement.Statement to construct nGQL statements,

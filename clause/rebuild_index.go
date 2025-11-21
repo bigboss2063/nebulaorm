@@ -2,6 +2,7 @@ package clause
 
 import (
 	"fmt"
+
 	"github.com/haysons/norm/resolver"
 )
 

@@ -1,8 +1,9 @@
 package statement
 
 import (
-	"github.com/haysons/norm/clause"
 	"reflect"
+
+	"github.com/haysons/norm/clause"
 )
 
 // InsertVertex generate delete vertex clause

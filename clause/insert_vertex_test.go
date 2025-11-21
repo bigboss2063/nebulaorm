@@ -2,9 +2,10 @@ package clause_test
 
 import (
 	"fmt"
-	"github.com/haysons/norm/clause"
 	"reflect"
 	"testing"
+
+	"github.com/haysons/norm/clause"
 )
 
 func TestInsertVertex(t *testing.T) {

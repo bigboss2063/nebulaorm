@@ -1,8 +1,9 @@
 package statement
 
 import (
-	"github.com/haysons/norm/clause"
 	"strings"
+
+	"github.com/haysons/norm/clause"
 )
 
 // Statement is an nGQL statement that needs to be constructed.

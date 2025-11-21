@@ -2,9 +2,10 @@ package clause_test
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/haysons/norm/clause"
 	"github.com/haysons/norm/resolver"
-	"testing"
 )
 
 func TestCreateTag(t *testing.T) {

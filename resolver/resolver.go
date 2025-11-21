@@ -3,12 +3,13 @@ package resolver
 import (
 	"errors"
 	"fmt"
-	"github.com/haysons/norm/internal/utils"
-	nebula "github.com/vesoft-inc/nebula-go/v3"
 	"reflect"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/haysons/norm/internal/utils"
+	nebula "github.com/vesoft-inc/nebula-go/v3"
 )
 
 const (

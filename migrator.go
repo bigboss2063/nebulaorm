@@ -1,10 +1,11 @@
 package norm
 
 import (
-	"github.com/haysons/norm/clause"
-	"github.com/haysons/norm/resolver"
 	"reflect"
 	"strings"
+
+	"github.com/haysons/norm/clause"
+	"github.com/haysons/norm/resolver"
 )
 
 type Migrator struct {

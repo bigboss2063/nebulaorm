@@ -2,9 +2,10 @@ package clause_test
 
 import (
 	"fmt"
-	"github.com/haysons/norm/clause"
 	"testing"
 	"time"
+
+	"github.com/haysons/norm/clause"
 )
 
 func TestWhen(t *testing.T) {

@@ -1,8 +1,9 @@
 package statement
 
 import (
-	"github.com/haysons/norm/clause"
 	"strings"
+
+	"github.com/haysons/norm/clause"
 )
 
 // Raw execute any statement

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/haysons/norm"
 	"log"
 	"time"
+
+	"github.com/haysons/norm"
 )
 
 // After installing nebula graph locally, a default demo_basketballplayer graph space will be created.

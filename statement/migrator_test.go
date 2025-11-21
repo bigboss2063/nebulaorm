@@ -2,10 +2,11 @@ package statement
 
 import (
 	"fmt"
-	"github.com/haysons/norm/clause"
-	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
+
+	"github.com/haysons/norm/clause"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestCreateVertexTags(t *testing.T) {

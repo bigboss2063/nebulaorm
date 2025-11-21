@@ -1,10 +1,11 @@
 package main
 
 import (
-	"github.com/haysons/norm"
-	"github.com/haysons/norm/clause"
 	"log"
 	"time"
+
+	"github.com/haysons/norm"
+	"github.com/haysons/norm/clause"
 )
 
 type Player struct {

@@ -2,9 +2,10 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"strconv"
 	"strings"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type CreateTag struct {

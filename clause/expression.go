@@ -2,10 +2,11 @@ package clause
 
 import (
 	"errors"
-	"github.com/haysons/norm/resolver"
 	"reflect"
 	"strconv"
 	"strings"
+
+	"github.com/haysons/norm/resolver"
 )
 
 // Expression expression interface

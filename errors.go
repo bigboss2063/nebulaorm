@@ -2,6 +2,7 @@ package norm
 
 import (
 	"errors"
+
 	"github.com/haysons/norm/clause"
 	"github.com/haysons/norm/resolver"
 )

@@ -2,10 +2,11 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"sort"
 	"strconv"
 	"strings"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type CreateIndex struct {

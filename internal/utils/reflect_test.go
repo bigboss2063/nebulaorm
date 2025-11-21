@@ -1,9 +1,10 @@
 package utils
 
 import (
-	"github.com/stretchr/testify/assert"
 	"reflect"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestSliceSetElem(t *testing.T) {

@@ -2,8 +2,9 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"slices"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type AlterEdge struct {

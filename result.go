@@ -3,12 +3,13 @@ package norm
 import (
 	"context"
 	"fmt"
+	"reflect"
+
 	"github.com/haysons/norm/internal/utils"
 	"github.com/haysons/norm/logger"
 	"github.com/haysons/norm/resolver"
 	"github.com/haysons/norm/statement"
 	nebula "github.com/vesoft-inc/nebula-go/v3"
-	"reflect"
 )
 
 // NGQL get this generated statement does not actually execute the statement

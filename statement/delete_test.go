@@ -2,9 +2,10 @@ package statement
 
 import (
 	"fmt"
+	"testing"
+
 	"github.com/haysons/norm/clause"
 	"github.com/stretchr/testify/assert"
-	"testing"
 )
 
 func TestDelete(t *testing.T) {

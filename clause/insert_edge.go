@@ -2,8 +2,9 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"reflect"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type InsertEdge struct {

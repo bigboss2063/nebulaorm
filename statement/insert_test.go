@@ -2,8 +2,9 @@ package statement
 
 import (
 	"fmt"
-	"github.com/stretchr/testify/assert"
 	"testing"
+
+	"github.com/stretchr/testify/assert"
 )
 
 func TestInsert(t *testing.T) {

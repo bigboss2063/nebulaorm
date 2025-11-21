@@ -1,11 +1,12 @@
 package clause_test
 
 import (
+	"strings"
+	"testing"
+
 	"github.com/haysons/norm/clause"
 	"github.com/haysons/norm/statement"
 	"github.com/stretchr/testify/assert"
-	"strings"
-	"testing"
 )
 
 func testBuildClauses(t *testing.T, clauses []clause.Interface, gqlWant string, errWant error) {

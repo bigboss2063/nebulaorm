@@ -2,9 +2,10 @@ package resolver
 
 import (
 	"errors"
-	"github.com/haysons/norm/internal/utils"
 	"reflect"
 	"sort"
+
+	"github.com/haysons/norm/internal/utils"
 )
 
 // RecordSchema parses the record structure provided by the business layer for subsequent assignment of the Record \

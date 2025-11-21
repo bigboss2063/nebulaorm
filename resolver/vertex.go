@@ -3,9 +3,10 @@ package resolver
 import (
 	"errors"
 	"fmt"
-	nebula "github.com/vesoft-inc/nebula-go/v3"
 	"reflect"
 	"strconv"
+
+	nebula "github.com/vesoft-inc/nebula-go/v3"
 )
 
 // VertexIDStr a structure that implements this interface is treated as a vertex and has a vertex_id of type string

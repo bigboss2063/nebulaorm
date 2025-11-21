@@ -1,9 +1,10 @@
 package norm
 
 import (
+	"time"
+
 	"github.com/haysons/norm/logger"
 	nebula "github.com/vesoft-inc/nebula-go/v3"
-	"time"
 )
 
 // Config  for DB

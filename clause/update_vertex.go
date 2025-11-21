@@ -3,10 +3,11 @@ package clause
 import (
 	"errors"
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"reflect"
 	"sort"
 	"strings"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type UpdateVertex struct {

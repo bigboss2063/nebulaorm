@@ -2,9 +2,10 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"reflect"
 	"strconv"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type DeleteEdge struct {

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"github.com/haysons/norm"
 	"log"
 	"time"
+
+	"github.com/haysons/norm"
 )
 
 // norm.DB is concurrency-safe and internally uses the connection pool provided by the nebula graph official SDK.

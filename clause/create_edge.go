@@ -2,8 +2,9 @@ package clause
 
 import (
 	"fmt"
-	"github.com/haysons/norm/resolver"
 	"strconv"
+
+	"github.com/haysons/norm/resolver"
 )
 
 type CreateEdge struct {
