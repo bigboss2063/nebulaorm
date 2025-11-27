@@ -124,6 +124,15 @@ func (db *DB) getInstance() *DB {
 	return db
 }
 
+func (db *DB) session() *DB {
+	return &DB{
+		Statement:   statement.New(),
+		conf:        db.conf,
+		sessionPool: db.sessionPool,
+		clone:       0,
+	}
+}
+
 func (db *DB) Close() error {
 	db.sessionPool.Close()
 	return nil
