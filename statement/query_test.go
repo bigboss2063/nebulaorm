@@ -199,6 +199,36 @@ func TestQuery(t *testing.T) {
 			},
 			want: `GO FROM "player100" OVER follow YIELD dst(edge) AS id | GO FROM $-.id OVER serve YIELD properties($$).name AS Team, properties($^).name AS Player`,
 		},
+		{
+			stmt: func() *Statement {
+				return New().GetSubgraph(1).From("player101").Yield("VERTICES AS nodes, EDGES AS relationships")
+			},
+			want: `GET SUBGRAPH 1 STEPS FROM "player101" YIELD VERTICES AS nodes, EDGES AS relationships;`,
+		},
+		{
+			stmt: func() *Statement {
+				return New().GetSubgraph(1).From("player101").In("follow").Yield("VERTICES AS nodes, EDGES AS relationships")
+			},
+			want: `GET SUBGRAPH 1 STEPS FROM "player101" IN follow YIELD VERTICES AS nodes, EDGES AS relationships;`,
+		},
+		{
+			stmt: func() *Statement {
+				return New().GetSubgraph(1, true).From("player101").Out("serve").Yield("VERTICES AS nodes, EDGES AS relationships")
+			},
+			want: `GET SUBGRAPH WITH PROP 1 STEPS FROM "player101" OUT serve YIELD VERTICES AS nodes, EDGES AS relationships;`,
+		},
+		{
+			stmt: func() *Statement {
+				return New().GetSubgraph(2, true).From("player101").Where("follow.degree > 90").Where("$$.player.age > 30").Yield("VERTICES AS nodes, EDGES AS relationships")
+			},
+			want: `GET SUBGRAPH WITH PROP 2 STEPS FROM "player101" WHERE follow.degree > 90 AND $$.player.age > 30 YIELD VERTICES AS nodes, EDGES AS relationships;`,
+		},
+		{
+			stmt: func() *Statement {
+				return New().GetSubgraph(100).From("player101").Out("follow").Yield("VERTICES AS nodes, EDGES AS relationships")
+			},
+			want: `GET SUBGRAPH 100 STEPS FROM "player101" OUT follow YIELD VERTICES AS nodes, EDGES AS relationships;`,
+		},
 	}
 	for i, tt := range tests {
 		t.Run(fmt.Sprintf("#_%d", i), func(t *testing.T) {

@@ -133,6 +133,38 @@ func (db *DB) Limit(limit int, offset ...int) (tx *DB) {
 	return
 }
 
+// GetSubgraph generate get subgraph clause
+// see more information on the method of the same name in statement.Statement
+func (db *DB) GetSubgraph(steps int, withProp ...bool) (tx *DB) {
+	tx = db.getInstance()
+	tx.Statement.GetSubgraph(steps, withProp...)
+	return
+}
+
+// In generate in clause
+// see more information on the method of the same name in statement.Statement
+func (db *DB) In(edgeTypes ...string) (tx *DB) {
+	tx = db.getInstance()
+	tx.Statement.In(edgeTypes...)
+	return
+}
+
+// Out generate out clause
+// see more information on the method of the same name in statement.Statement
+func (db *DB) Out(edgeTypes ...string) (tx *DB) {
+	tx = db.getInstance()
+	tx.Statement.Out(edgeTypes...)
+	return
+}
+
+// Both generate both clause
+// see more information on the method of the same name in statement.Statement
+func (db *DB) Both(edgeTypes ...string) (tx *DB) {
+	tx = db.getInstance()
+	tx.Statement.Both(edgeTypes...)
+	return
+}
+
 // InsertVertex generate insert vertex clause
 // see more information on the method of the same name in statement.Statement
 func (db *DB) InsertVertex(vertexes any, ifNotExists ...bool) (tx *DB) {

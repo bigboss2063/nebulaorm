@@ -293,3 +293,80 @@ func (stmt *Statement) Limit(limit int, offset ...int) *Statement {
 	stmt.SetPartType(PartTypeLimit)
 	return stmt
 }
+
+// GetSubgraph generate get subgraph clause
+//
+// GET SUBGRAPH 1 STEPS
+// stmt.GetSubgraph(1)
+//
+// GET SUBGRAPH WITH PROP 2 STEPS
+// stmt.GetSubgraph(2, true)
+func (stmt *Statement) GetSubgraph(steps int, withProp ...bool) *Statement {
+	var withPropOpt bool
+	if len(withProp) > 0 {
+		withPropOpt = withProp[0]
+	}
+	stmt.AddClause(&clause.GetSubgraph{
+		StepCount: steps,
+		WithProp:  withPropOpt,
+	})
+	stmt.SetPartType(PartTypeGetSubgraph)
+	return stmt
+}
+
+// In generate in clause
+//
+// IN serve
+// stmt.In("server")
+//
+// IN serve, follow
+// stmt.In("server", "follow")
+func (stmt *Statement) In(edgeTypes ...string) *Statement {
+	if len(edgeTypes) == 0 {
+		return stmt
+	}
+	stmt.AddClause(&clause.In{
+		InOutBase: clause.InOutBase{
+			EdgeTypeList: edgeTypes,
+		},
+	})
+	return stmt
+}
+
+// Out generate out clause
+//
+// OUT serve
+// stmt.Out("server")
+//
+// OUT serve, follow
+// stmt.Out("server", "follow")
+func (stmt *Statement) Out(edgeTypes ...string) *Statement {
+	if len(edgeTypes) == 0 {
+		return stmt
+	}
+	stmt.AddClause(&clause.Out{
+		InOutBase: clause.InOutBase{
+			EdgeTypeList: edgeTypes,
+		},
+	})
+	return stmt
+}
+
+// Both generate both clause
+//
+// BOTH serve
+// stmt.Both("server")
+//
+// BOTH serve, follow
+// stmt.Both("server", "follow")
+func (stmt *Statement) Both(edgeTypes ...string) *Statement {
+	if len(edgeTypes) == 0 {
+		return stmt
+	}
+	stmt.AddClause(&clause.Both{
+		InOutBase: clause.InOutBase{
+			EdgeTypeList: edgeTypes,
+		},
+	})
+	return stmt
+}

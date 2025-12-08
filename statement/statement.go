@@ -211,6 +211,7 @@ const (
 	PartTypeCreateIndex
 	PartTypeRebuildIndex
 	PartTypeDropIndex
+	PartTypeGetSubgraph
 )
 
 func (p *Part) getClausesBuild() []string {
@@ -260,6 +261,8 @@ func (p *Part) getClausesBuild() []string {
 		return []string{clause.RebuildIndexName}
 	case PartTypeDropIndex:
 		return []string{clause.DropIndexName}
+	case PartTypeGetSubgraph:
+		return []string{clause.GetSubgraphName, clause.FromName, clause.InName, clause.OutName, clause.BothName, clause.WhereName, clause.YieldName}
 	default:
 		// The following clauses may not belong to a specific type of statement and can be used separately
 		return []string{clause.GroupName, clause.YieldName, clause.OrderName, clause.LimitName}

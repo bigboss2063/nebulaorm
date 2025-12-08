@@ -25,6 +25,10 @@ type ChainInterface[T any] interface {
 	Yield(expr string, distinct ...bool) ChainInterface[T]
 	OrderBy(expr string) ChainInterface[T]
 	Limit(limit int) ChainInterface[T]
+	GetSubgraph(steps int, withProp ...bool) ChainInterface[T]
+	In(edgeTypes ...string) ChainInterface[T]
+	Out(edgeTypes ...string) ChainInterface[T]
+	Both(edgeTypes ...string) ChainInterface[T]
 	InsertVertex(vertexes any, ifNotExists ...bool) ChainInterface[T]
 	UpdateVertex(vid any, propsUpdate any, opts ...clause.Option) ChainInterface[T]
 	UpsertVertex(vid any, propsUpdate any, opts ...clause.Option) ChainInterface[T]
@@ -184,6 +188,30 @@ func (c chainG[T]) OrderBy(expr string) ChainInterface[T] {
 func (c chainG[T]) Limit(limit int) ChainInterface[T] {
 	return c.with(func(db *DB) *DB {
 		return db.Limit(limit)
+	})
+}
+
+func (c chainG[T]) GetSubgraph(steps int, withProp ...bool) ChainInterface[T] {
+	return c.with(func(db *DB) *DB {
+		return db.GetSubgraph(steps, withProp...)
+	})
+}
+
+func (c chainG[T]) In(edgeTypes ...string) ChainInterface[T] {
+	return c.with(func(db *DB) *DB {
+		return db.In(edgeTypes...)
+	})
+}
+
+func (c chainG[T]) Out(edgeTypes ...string) ChainInterface[T] {
+	return c.with(func(db *DB) *DB {
+		return db.Out(edgeTypes...)
+	})
+}
+
+func (c chainG[T]) Both(edgeTypes ...string) ChainInterface[T] {
+	return c.with(func(db *DB) *DB {
+		return db.Both(edgeTypes...)
 	})
 }
 
